@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1 - Vòng lặp While</title>
+</head>
+<body>
+    <script>
+        let num = parseFloat(prompt("Enter a number: "));
+        let total = 0;
+        while (num != -1) {
+            alert(num);
+            total += num;
+            num = parseFloat(prompt("Enter a number: "));
+        }
+        alert("Tổng các số đã nhập là: " + total);
+    </script>
+</body>
+</html>
