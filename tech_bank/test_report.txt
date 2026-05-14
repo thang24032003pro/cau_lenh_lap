@@ -1,0 +1,1 @@
+Chạy thử với 3 trường hợp mảng:[100, -50, 20000] $\rightarrow$ Income: 20100, Fraud: true, Retry: 1-3 lần.[-10, -20, -30] $\rightarrow$ Income: 0, Fraud: false.[] $\rightarrow$ Income: 0, Fraud: false.
