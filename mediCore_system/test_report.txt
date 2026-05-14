@@ -1,0 +1,4 @@
+let testData = [
+    { id: "P99", name: "Lỗi Data 1", status: "stable", heartRate: null }, // Nhịp tim null
+    { id: "P100", name: "Lỗi Data 2", status: "critical", heartRate: "N/A" }, // Nhịp tim sai kiểu dữ liệu
+];
