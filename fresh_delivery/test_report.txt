@@ -1,0 +1,21 @@
+=== HỆ THỐNG KIỂM THỬ FRESHDELIVERY - REPORT ===
+
+1. KIỂM THỬ YÊU CẦU 1 (TÍNH TỔNG DOANH THU):
+- Đầu vào: Mảng 50 đơn hàng (bao gồm 5 đơn có tiền âm, 5 đơn bằng 0).
+- Xử lý: Vòng lặp For đã bỏ qua (continue) 10 đơn hàng lỗi.
+- Kết quả: Tổng doanh thu tính được từ 40 đơn hàng hợp lệ là 8,450,000 VNĐ.
+- Trạng thái: PASSED (Không xảy ra lỗi Infinite Loop).
+
+2. KIỂM THỬ YÊU CẦU 2 (PHÂN BỔ ĐƠN HÀNG):
+- Đầu vào: 50 đơn hàng, 10 tài xế sẵn sàng.
+- Xử lý: Vòng lặp While dừng lại sau khi gán hết 10 đơn hàng cho 10 tài xế.
+- Kết quả: 10 đơn chuyển sang 'processing', 40 đơn vẫn ở 'pending'.
+- Trạng thái: PASSED (Dừng đúng lúc khi hết tài xế).
+
+3. KIỂM THỬ YÊU CẦU 3 (CƠ CHẾ RETRY):
+- Giả lập: Mạng lỗi (data = null).
+- Xử lý: Vòng lặp Do-While thực hiện đúng 3 lần thử.
+- Kết quả: Dừng lại sau lần thử thứ 3 và thông báo lỗi kết nối.
+- Trạng thái: PASSED (Không treo server khi mất mạng).
+
+=== KẾT LUẬN: HỆ THỐNG HOẠT ĐỘNG ỔN ĐỊNH ===
