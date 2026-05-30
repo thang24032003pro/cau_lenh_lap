@@ -5,13 +5,15 @@
     <title>Hiển thị số nguyên tố</title>
 </head>
 <body>
-    <p id="result-box"></p>
+    <h2>Dãy số nguyên tố</h2>
+    <p id="output"></p>
 
     <script>
         let numbers = parseInt(prompt("Nhập số lượng số nguyên tố cần in:"));
-        let resultBox = document.getElementById("result-box");
+
         if (isNaN(numbers) || numbers <= 0) {
-            resultBox.innerHTML = "Vui lòng nhập vào một số nguyên dương hợp lệ!";
+            document.getElementById("output").innerHTML =
+                "Vui lòng nhập một số nguyên dương hợp lệ!";
         } else {
             let count = 0;
             let N = 2;
@@ -19,19 +21,24 @@
 
             while (count < numbers) {
                 let isPrime = true;
+
                 for (let i = 2; i <= Math.sqrt(N); i++) {
                     if (N % i === 0) {
                         isPrime = false;
                         break;
                     }
                 }
+
                 if (isPrime) {
                     result += N + " ";
                     count++;
                 }
+
                 N++;
             }
-            resultBox.innerHTML = `<strong>Dãy số nguyên tố:</strong> ${result}`;
+
+            document.getElementById("output").innerHTML =
+                `Dãy số nguyên tố: ${result}`;
         }
     </script>
 </body>
